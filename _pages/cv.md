@@ -11,35 +11,35 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Computer Science, Hong Kong University of Science and Technology (HKUST), 2024 - Present
+  * Supervisor: Professor Junxian He
+  * Research focus: Natural Language Processing and Machine Learning
 
-Work experience
+* B.Eng. in Computer Science, Shanghai Jiao Tong University (SJTU), 2020 - 2024
+  * Graduated with honors
+  * Received Zhiyuan Honor Scholarship
+
+Research Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* February 2025 - Present: Research Intern
+  * MINIMAX
+  * Working on LLM reasoning and reinforcement learning
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* June 2024 - September 2024: Research Intern
+  * Tencent WXG
+  * Advisor: Zifei Shan
+  * Working on Vision-Language Models and chart understanding
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+* June 2023 - December 2023: Research Intern
+  * Shanghai AI Lab
+  * Advisor: Professor Yu Cheng
+  * Working on LLM truthfulness and interpretability
+
+Research Interests
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* LLM Reasoning and Reinforcement Learning
+* Hallucination in Vision-Language Models (VLM)
+* LLM truthfulness and Interpretability
 
 Publications
 ======
@@ -59,6 +59,6 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Awards and Honors
 ======
-* Currently signed in to 43 different slack teams
+* Zhiyuan Honor Scholarship, Shanghai Jiao Tong University
