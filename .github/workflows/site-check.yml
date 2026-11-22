@@ -1,38 +1,52 @@
-name: Site content check
+name: Build and publish LJT-Homepage
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-24.04
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v7.0.1
+
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
           node-version: '24'
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.328.0
         with:
           ruby-version: '3.1'
           bundler-cache: true
+
       - name: Install UglifyJS
         run: npm install -g uglify-js
+
       - name: Prepare minified JavaScript
         run: |
           uglifyjs assets/js/plugins/jquery.greedy-navigation.js assets/js/_main.js assets/js/theme.js -c -m -o assets/js/main.min.js
+
       - name: Build Jekyll site with project base path
         run: bundle exec jekyll build --baseurl "/LJT-Homepage"
         env:
           JEKYLL_ENV: production
-      - name: Upload built site for inspection
-        uses: actions/upload-artifact@v4
-        with:
-          name: ljt-homepage-site
-          path: _site
-          retention-days: 3
+
+      - name: Replace gh-pages branch with generated site
+        run: |
+          set -euo pipefail
+          mv _site /tmp/ljt-site
+          touch /tmp/ljt-site/.nojekyll
+          git fetch origin gh-pages
+          git checkout -B gh-pages origin/gh-pages
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a /tmp/ljt-site/. .
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy generated LJT-Homepage" || exit 0
+          git push origin gh-pages
