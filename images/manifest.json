@@ -1,21 +1,17 @@
----
-layout: none
-permalink: /images/manifest.json
----
 {
-	"name": {{ site.title | jsonify }},
-	"short_name": {{ site.name | jsonify }},
-	"description": {{ site.description | jsonify }},
-	"start_url": "{{ site.baseurl | default: '/' }}",
-	"lang": {{ site.locale | default: "en" | jsonify }},
+	"name": "Junteng Liu's Homepage",
+	"short_name": "Junteng Liu",
+	"description": "Junteng Liu is a first-year PhD candidate at HKUST NLP Group researching LLM reasoning, reinforcement learning, vision-language model hallucination, truthfulness, and interpretability.",
+	"start_url": "/LJT-Homepage",
+	"lang": "en-US",
 	"icons": [
 		{
-			"src": {{ "/images/favicon-192x192.png" | relative_url | jsonify }},
+			"src": "/LJT-Homepage/images/favicon-192x192.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": {{ "/images/favicon-512x512.png" | relative_url | jsonify }},
+			"src": "/LJT-Homepage/images/favicon-512x512.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
