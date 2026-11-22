@@ -8,15 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I am a first-year Ph.D. candidate at the [HKUST NLP Group](https://github.com/Vicent0205), supervised by Professor Junxian He. I graduated from Shanghai Jiao Tong University (SJTU) in June 2024 with a B.Eng. degree completed from 2020 to 2024. My research focuses on natural language processing and machine learning, with particular interests in LLM reasoning and reinforcement learning, hallucination in vision-language models, and LLM truthfulness and interpretability.
+I am a first-year Ph.D. candidate at the **HKUST NLP Group**, supervised by Professor Junxian He. I graduated from Shanghai Jiao Tong University (SJTU) in June 2024 with a B.Eng. degree completed from 2020 to 2024. My research focuses on natural language processing and machine learning, with particular interests in LLM reasoning and reinforcement learning, hallucination in vision-language models, and LLM truthfulness and interpretability.
 
 I am currently a Research Intern at MINIMAX (February 2025–Present).
 
-**Quick links:** [Email](mailto:jliugi@connect.ust.hk) · [GitHub](https://github.com/Vicent0205) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate) · [X / Twitter](https://x.com/junteng88716710) · [Publications](/LJT-Homepage/publications/) · [CV](/LJT-Homepage/cv/)
+**Quick links:** [Email](mailto:jliugi@connect.ust.hk) · [GitHub](https://github.com/Vicent0205) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate) · [X / Twitter](https://x.com/junteng88716710) · [Publications]({{ '/publications/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})
 
-> The navigation links above use this project site's `/LJT-Homepage/` base path. If the site is served from a custom domain, use the navigation bar links instead.
-
-## Page contents
+## Contents
 
 - [Academic background](#academic-background)
 - [Research experience](#research-experience)
@@ -29,14 +27,14 @@ I am currently a Research Intern at MINIMAX (February 2025–Present).
 
 - **The Hong Kong University of Science and Technology (HKUST)** — Ph.D. in Computer Science, 2024–Present.
   - Member of the HKUST NLP Group.
-  - Supervisor: Professor Junxian He.
+  - Ph.D. supervisor: Professor Junxian He.
 - **Shanghai Jiao Tong University (SJTU)** — B.Eng., 2020–2024; graduated in June 2024.
   - Professor Junxian He previously advised me during my undergraduate studies at SJTU.
 
 ## Research experience
 
 - **HKUST NLP Group — Ph.D. Candidate in Computer Science** (2024–Present)
-  - Research areas: natural language processing and machine learning.
+  - Research focus: natural language processing and machine learning.
   - Research interests: LLM reasoning and reinforcement learning; hallucination in vision-language models; LLM truthfulness and interpretability.
   - Supervisor: Professor Junxian He.
 
@@ -50,20 +48,20 @@ I am currently a Research Intern at MINIMAX (February 2025–Present).
 
 ## Skills and research interests
 
-The information recorded for this homepage identifies the following research skills and thematic expertise:
+The profile information provided for this homepage records the following skills and research themes:
 
-- Natural language processing (NLP) and machine learning (ML) research.
+- Natural language processing and machine learning research.
 - LLM reasoning and reinforcement learning.
 - Hallucination in vision-language models (VLMs), including chart understanding and perception bottlenecks.
-- LLM truthfulness and interpretability, including inner-representation and truthfulness-hyperplane perspectives.
+- LLM truthfulness and interpretability, including the universal truthfulness hyperplane and inner representations.
 - Synthesizing verifiable reasoning data at scale for logical reasoning and related tasks.
 - Hallucination mitigation using inner-representation signals and alerts.
-- Multi-level, multi-discipline evaluation suites for foundation models.
+- Multi-level, multi-discipline evaluation for foundation models.
 - Composing parameter-efficient modules with arithmetic operations.
 
 ## Publications
 
-All six publications recorded in the available profile memory are listed below. They are also organized as individual entries on the [Publications page](/LJT-Homepage/publications/).
+All six publications recorded in the provided profile memory are listed below and are also available on the dedicated [Publications page]({{ '/publications/' | relative_url }}).
 
 ### 2025
 
@@ -73,7 +71,7 @@ All six publications recorded in the available profile memory are listed below. 
 
 2. **On the Perception Bottleneck of VLMs for Chart Understanding**  
    **Junteng Liu** (first author), Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, and Junxian He.  
-   Published on arXiv, 2025. Associated code repository recorded as **Vision4Chart**.
+   Published on arXiv, 2025. Associated GitHub code repository recorded as **Vision4Chart**.
 
 ### 2024
 
@@ -95,7 +93,7 @@ All six publications recorded in the available profile memory are listed below. 
    Jinghan Zhang, Shiqi Chen, **Junteng Liu**, and Junxian He.  
    Published at NeurIPS 2023.
 
-For the publication list sorted by publication date, see my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate).
+The [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate) provides the publication list sorted by publication date.
 
 ## Honors
 
