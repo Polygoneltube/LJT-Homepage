@@ -6,12 +6,58 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: publish-ljt-homepage
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-24.04
+    timeout-minutes: 25
     steps:
       - name: Checkout source
         uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Remove inherited template pages and sample content
+        run: |
+          set -euo pipefail
+
+          # The finished site has the home/About page, the static Publications page,
+          # and the theme-required 404 page. Remove every other inherited _pages entry.
+          find _pages -maxdepth 1 -type f \
+            ! -name '404.md' \
+            ! -name 'about.md' \
+            ! -name 'publications.html' \
+            -print -delete
+
+          # Remove upstream demo collections and sample asset/content directories.
+          rm -rf \
+            _posts \
+            _drafts \
+            _talks \
+            _teaching \
+            _portfolio \
+            _publications \
+            files \
+            talkmap \
+            markdown_generator
+
+          rm -f \
+            talkmap.ipynb \
+            talkmap.py \
+            talkmap_out.ipynb
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Remove inherited template pages and sample content"
+            git push origin HEAD:master
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -29,6 +75,7 @@ jobs:
 
       - name: Prepare minified JavaScript
         run: |
+          set -euo pipefail
           uglifyjs assets/js/plugins/jquery.greedy-navigation.js assets/js/_main.js assets/js/theme.js -c -m -o assets/js/main.min.js
 
       - name: Build Jekyll site with project base path
@@ -39,12 +86,16 @@ jobs:
       - name: Replace gh-pages branch with generated site
         run: |
           set -euo pipefail
+
           mv _site /tmp/ljt-site
           touch /tmp/ljt-site/.nojekyll
+
           git fetch origin gh-pages
           git checkout -B gh-pages origin/gh-pages
+
           find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
           cp -a /tmp/ljt-site/. .
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A

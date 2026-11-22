@@ -12,7 +12,7 @@ I am a first-year Ph.D. candidate at the **HKUST NLP Group**, supervised by Prof
 
 I am currently a Research Intern at MINIMAX (February 2025–Present).
 
-**Quick links:** [Email](mailto:jliugi@connect.ust.hk) · [GitHub](https://github.com/Vicent0205) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate) · [X / Twitter](https://x.com/junteng88716710) · [Publications]({{ '/publications/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})
+**Quick links:** [Email](mailto:jliugi@connect.ust.hk) · [GitHub](https://github.com/Vicent0205) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate) · [X / Twitter](https://x.com/junteng88716710) · [Publications]({{ '/publications/' | relative_url }})
 
 ## Contents
 
